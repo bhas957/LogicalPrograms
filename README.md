@@ -168,3 +168,5 @@ use LinkedHashMap to implement LRU cache in Java.
 Implement the merge sort algorithm in Java. You can write a recursive or iterative
 solution, whichever you like. You also need to explain the time and space complexity for
 the best, worst, and average case.
+
+Ref : https://javarevisited.blogspot.com/2017/07/top-50-java-programs-from-coding-Interviews.html
