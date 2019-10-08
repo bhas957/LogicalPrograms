@@ -12,7 +12,7 @@ You need to write a simple Java program to check if a given String is palindrome
 
 
 
-
+ 
 4. Integer Palindrome (solution)
 This is generally asked as follow-up or alternative of the previous program. This time you need to check if given Integer is palindrome or not. An integer is called palindrome if it's equal to its reverse, e.g. 1001 is a palindrome, but 1234 is not because the reverse of 1234 is 4321 which is not equal to 1234. You can use divide by 10 to reduce the number and modulus 10 to get the last digit. This trick is used to solve this problem.
 
@@ -25,7 +25,7 @@ This is one of the interesting programs from Java Interviews, mostly asked to 2 
 
 
 
-
+ 
 7. Factorial (solution)
 This is one of the simplest programs you can expect in interviews. It is generally asked to see if you can code or not. Sometimes interviewer may also ask about changing a recursive solution to iterative one or vice-versa.
 
@@ -58,7 +58,7 @@ Write a program to check if two given String is Anagram of each other. Your func
 
 
 
-
+ 
 
 19. Design a Vending Machine (solution)
 This one of the popular OOAD (object-oriented analysis and design) question from Java Interviews. You will be given 3 hours to design and code a vending machine satisfying some of the business requirements. You also need to write unit tests to prove your code satisfy those requirements. You can see this article for more object-oriented analysis questions.
@@ -89,7 +89,7 @@ You need to write a Java program to sort an array of integers using a quick sort
 
 
 
-
+ 
 31. Insertion sort (solution)
 Write a program to implement the insertion sort algorithm in Java. The program should take an unsorted array and sort it using insertion sort algorithm Also explain the best case and worst case time and space complexity of the Insertion sort algorithm.
 
@@ -172,3 +172,5 @@ Java Programming Interview Questions
 
 50. Merge sort
 Implement the merge sort algorithm in Java. You can write a recursive or iterative solution, whichever you like. You also need to explain the time and space complexity for the best, worst, and average case.
+
+Read more: https://javarevisited.blogspot.com/2017/07/top-50-java-programs-from-coding-Interviews.html#ixzz61lsCuKLW
