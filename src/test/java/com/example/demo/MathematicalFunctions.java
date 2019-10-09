@@ -9,12 +9,13 @@ import cucumber.api.java.en.When;
 import java.util.ArrayList;
 
 public class MathematicalFunctions {
-    int givenNumber = 1;
+    String givenInput = "1";
+    String tempVariable = "";
     ArrayList<Integer> storeNumbers = new ArrayList<>();
 
-    @Given("A number {int}")
-    public void GetInput(int i) {
-        givenNumber = i;
+    @Given("A .+ (.+)")
+    public void GetInput(String input) {
+        givenInput = input;
     }
 
     /*
@@ -27,7 +28,7 @@ public class MathematicalFunctions {
         int fibo1 = 1, fibo2 = 1, nextFib;
         storeNumbers.add(1);
         storeNumbers.add(1);
-        for (int i = 3; i <= givenNumber; i++) {
+        for (int i = 3; i <= Integer.parseInt(givenInput); i++) {
             nextFib = fibo1 + fibo2;
             storeNumbers.add(nextFib);
             fibo1 = fibo2;
@@ -37,11 +38,11 @@ public class MathematicalFunctions {
 
     @Then("I will print the Generated (.+) series on log.")
     public void iWillPrintTheGeneratedSeriesOnLog(String s) {
-        System.out.println("Printing " + s + " Series Upto " + givenNumber + " Numbers");
+        System.out.println("Printing " + s + " Series Upto " + givenInput + " Numbers");
         for (Integer i : storeNumbers) {
             System.out.print(i + " ");
         }
-        System.out.println(" ");
+        System.out.println("\n");
     }
 
     /*
@@ -62,10 +63,22 @@ public class MathematicalFunctions {
     @When("I generate a prime numbers upto the given number")
     public void iGenerateAPrimeNumbersUptoTheGivenNumber() {
         storeNumbers.clear();
-        for (int i = 2; i <= givenNumber; i++) {
+        for (int i = 2; i <= Integer.parseInt(givenInput); i++) {
             if (isPrime(i)) {
                 storeNumbers.add(i);
             }
     }
+    }
+
+    @When("I Reverse the given Input string")
+    public void iReverseTheGivenInputString() {
+        for (int i = givenInput.length() - 1; i >= 0; i--) {
+            tempVariable = tempVariable + givenInput.charAt(i);
+        }
+    }
+
+    @Then("the Given input string and Reverse string are same.")
+    public void theGivenInputStringAndReverseStringAreSame() {
+
     }
 }
