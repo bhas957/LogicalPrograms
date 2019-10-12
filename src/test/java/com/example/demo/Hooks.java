@@ -3,8 +3,23 @@ package com.example.demo;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
+
+@EnableAutoConfiguration
+@Configuration
+@ComponentScan(basePackages = "com.example.demo")
+@SpringBootApplication
 public class Hooks {
+
+    @io.cucumber.java.Before
+    public void beforetest() {
+        SpringApplication.run(Hooks.class);
+    }
 
     @Before
     public void beforeScenario(Scenario scenario) {
